@@ -16,17 +16,25 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.subrotokumar.memeshare.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     var memeurl:String?=null
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+        loadMeme()
+        loadMeme()
     }
 
     private fun loadMeme()
     {
-        findViewById<ProgressBar>(R.id.progressBar).visibility=View.VISIBLE
+        binding.progressBar.visibility=View.VISIBLE
 
         val jsonObjectRequest= JsonObjectRequest(
             Request.Method.GET, "https://meme-api.herokuapp.com/gimme",null,
@@ -36,15 +44,15 @@ class MainActivity : AppCompatActivity() {
                 {
                     override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?, isFirstResource: Boolean): Boolean
                     {
-                        findViewById<ProgressBar>(R.id.progressBar).visibility=View.GONE
+                        binding.progressBar.visibility=View.GONE
                         return false
                     }
                     override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean
                     {
-                        findViewById<ProgressBar>(R.id.progressBar).visibility=View.GONE
+                        binding.progressBar.visibility=View.GONE
                         return false
                     }
-                }).into(findViewById(R.id.ivMeme))
+                }).into(binding.ivMeme)
             },
             Response.ErrorListener { Toast.makeText(this,"Something went wrong!", Toast.LENGTH_SHORT).show() })
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
