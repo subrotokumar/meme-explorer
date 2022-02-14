@@ -1,6 +1,6 @@
-<p align="center"><a href="https://github.com/subrotokumar/meme-explorer"><img src="meta/android/icon.png" width="150"></a></p>
-<h2 align="center"><b>Meme Explorer</b></h2>
-<h4 align="center">A fun meme sharing app for android devices.</h4>
+<p align="center"><a href="https://github.com/subrotokumar/meme-explorer"><img src="meta/android/app-icon.png" width="150"></a></p>
+<h2 align="center"><b>Meme Share</b></h2>
+<h4 align="center">A fun meme explorer and sharing app for android devices.</h4>
 <p align="center"><a href="https://github.com/subrotokumar/meme-explorer/releases"><img src="/meta/android/download.png"></a></p> 
 <p align="center">
 <a href="https://github.com/subrotokumar/flames" alt="GitHub release"><img src="https://img.shields.io/badge/version-0.1.0-blue.svg" ></a>
@@ -9,7 +9,7 @@
 <h3 align="center">**Star :star:  this repo to show your support and it really does matter!** :clap:</h4>
 
 ## Description
-Meme Explorer is a api based android app that let you browse random memes scrapped from Reddit and let you share these memes with friends.
+Meme Share is a api based memes explorer android app that let you browse random memes scrapped from Reddit and let you share these memes with friends.
 
 ### Features
 * Let you browse Memes from Reddit
