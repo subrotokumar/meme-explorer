@@ -13,6 +13,7 @@
         android:layout_height="0dp"
         android:contentDescription="@string/memes"
         android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,17 +34,22 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btnNext"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/next_button"
-        android:onClick="nextMeme"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
         android:contentDescription="@string/show_next_meme_button"
+        android:onClick="nextMeme"
+        android:text="NEXT"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btnShare"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ProgressBar
