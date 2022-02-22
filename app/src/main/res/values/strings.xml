@@ -3,4 +3,6 @@
     <string name="memes">MEMES</string>
     <string name="share_button">Share Button</string>
     <string name="show_next_meme_button">Show Next Meme Button</string>
+    <string name="next">NEXT</string>
+    <string name="meme_display_area">meme display area</string>
 </resources>
